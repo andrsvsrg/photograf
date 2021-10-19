@@ -1,0 +1,230 @@
+body {
+    
+    background-color: black;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+ /*Header and menu */
+.header {
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+    padding: 0;
+    margin-bottom: 20px;
+} 
+
+
+.logo img {
+    padding-top: 15px;
+    padding-left: 40px;
+    
+}
+.menu {
+    
+    overflow: hidden;
+    
+}
+ /* menu preset*/
+
+
+
+.menu_preset a, .menu a {
+    
+    margin: auto;
+    padding: 1rem 1.25rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    z-index: 1;
+}
+.menu_preset a:after ,.menu a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    left: 0.5rem;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+}
+.menu_preset a:hover, .menu a:hover {
+    color: #2d2d2d;
+}
+.menu_preset a:hover:after, .menu a:hover:after {
+    right: 0;
+    left: 0;
+    height: 100%;
+}
+.menu a {
+    display: block;
+    float: right;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 40px;
+    
+}
+
+.menu_preset {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+.menu_preset a {
+    
+    font-size: 16px;
+}
+/* Кнопка */
+a.button {
+    
+    font-size: 15px;
+    transition: 0.2s;
+    color: white;
+    text-decoration: none;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 7px 30px;
+    background-color: black;
+    
+}
+a.button:hover {
+     background-color: white;
+     color: black;
+     border: 2px solid white;
+}
+
+
+.contact {
+    margin: 20px  0px 60px 0px;
+    display: block;
+    text-align: center;
+}
+/* Set presset atmosffera*/
+
+.preset_photo h2 {
+    color: #ddcca3;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: -1px -1px #666, 1px 1px #FFF;
+}
+.preset_photo p {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 22px;
+    
+}
+
+
+.preset_paragraf  {
+    width: 80%;
+    margin: auto;
+}
+ol {
+    margin: auto;
+    width: 80%;
+}
+.row {
+    display: flex;
+    justify-content:space-evenly;
+
+}
+.column {
+    flex: 44%;
+    max-width: 44%;
+}
+.beer-slider {
+    margin-bottom: 10px;
+}
+/* social icon smoll */
+.contact_small {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content:space-between;
+}
+.contact_small a {
+    text-decoration: none;
+    color:white;
+}
+
+.contact_icon {
+    display: flex;
+    align-items: center;
+    
+}
+.contact_text {
+    align-items: center;
+}
+.contact_icon img {
+    width: 90%;
+}
+.to-top {
+    z-index: 99;
+    font-family:verdana;  /*шрифт*/
+    font-size:14px;  /*размер шрифта*/
+    font-weight:bold; 
+    text-align:center; 
+    color:#fff!important;  /*цвет шрифта*/
+    background:rgba(143, 143, 143, 0.5);  /*фон кнопки*/
+    width:100px;  /*ширина кнопки*/
+    border-radius: 10px;  /*скругление углов*/
+    padding:5px;  /*внутренний отступ*/
+    position:fixed;  /*фиксированная позиция кнопки на странице*/
+    bottom:30px;  /*расстояние от низа страницы*/
+    right:10px;  /*расстояние от правого края*/
+    cursor:pointer;  /*изменения указателя мыши при наведении*/
+    }
+
+@media screen and (max-width: 807px) {
+    .header {
+        flex-direction:column;
+        align-items: center;
+        
+    }
+    .menu a { 
+        flex-wrap: nowrap;
+        padding: 10px 30px;
+        margin-top: 5px;
+        
+    }
+    .menu {
+        margin: auto;
+        overflow: hidden;
+        
+    }
+    .row {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .column {
+        flex: 80%;
+        max-width: 80%;
+        
+    }
+    .logo img {
+        padding-left: 0;
+    }
+    .contact_small {
+        flex-direction:column;
+    }
+    .contact_icon {
+        justify-content:space-between;
+    }
+
+}
